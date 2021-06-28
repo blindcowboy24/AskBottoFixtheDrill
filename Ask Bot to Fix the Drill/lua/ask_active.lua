@@ -23,8 +23,8 @@ function PlayerStandard:_start_action_intimidate_alt(t, unit)
 		else
 			sound_name = "f38_any"
 		end
-		Keepers:SendState(prime_target.unit, Keepers:GetLuaNetworkingText(peer_id, prime_target.unit, 1), true)
-		Keepers:ShowCovers(prime_target.unit)
+		Keepers:send_state(unit, Keepers:get_lua_networking_text(my_peer_id, unit, 1), true)
+		Keepers:show_covers(unit)
 		self:_do_action_intimidate(t, interact_type, sound_name, skip_alert)
 	end
 end
